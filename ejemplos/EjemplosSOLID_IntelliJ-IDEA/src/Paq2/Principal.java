@@ -1,6 +1,7 @@
 package Paq2;
 import java.util.ArrayList;
-class Persona {
+import java.util.List;
+class Persona extends Principal {
     private String nombre;
     private int edad;
     public Persona(String n, int e){
@@ -19,20 +20,10 @@ class Persona {
     public int obtenerEdad(){
         return edad;
     }
-    public double promedioEdades(ArrayList<Persona> lista){
-        double promedio = 0;
-        double suma = 0;
-        for (int i = 0; i < lista.size(); i++) {
-            suma = lista.get(i).obtenerEdad();
-        }
-        promedio = suma/lista.size();
-        return promedio;
-    }
 }
 class OperacionesEstudiantes {
     private ArrayList<Persona> estudiantes;
     private double promedioEdades;
-    // private double edadminima;
     public void establecerEstudiante(ArrayList<Persona> lista){
         estudiantes = lista;
     }
@@ -42,7 +33,7 @@ class OperacionesEstudiantes {
     public void establecerPromedioEdades(){
         double suma = 0;
         for(Persona e: obtenerEstudiante()){
-            suma = e.obtenerEdad();
+            suma += e.obtenerEdad();
         }
         promedioEdades = suma/obtenerEstudiante().size();
     }
@@ -52,5 +43,10 @@ class OperacionesEstudiantes {
 }
 public class Principal {
     public static void main(String[] args) {
+        ArrayList <Persona> listaPersonas = new ArrayList<>(List.of(new Persona("P1",10), new Persona("P2",12)));
+        OperacionesEstudiantes opeEst = new OperacionesEstudiantes();
+        opeEst.establecerEstudiante(listaPersonas);
+        opeEst.establecerPromedioEdades();
+        System.out.println(opeEst.obtenerPromedioEdades());
     }
 }
