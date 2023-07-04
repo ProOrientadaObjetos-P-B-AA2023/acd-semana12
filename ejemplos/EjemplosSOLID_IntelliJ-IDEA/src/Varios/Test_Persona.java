@@ -16,9 +16,8 @@ class FormatoString implements IFormateable {
 }
 class FormatoXML implements IFormateable {
     public String getFormato(Persona p) {
-        String xml ="<xml>  < nombre > " + p.nombre +"< / nombre >";
-        xml = xml +"<apellido>"+p.apellidos +"< / apellido > < / xml >";
-        return xml;
+        return "<xml>  < nombre > " + p.nombre +"< / nombre >"
+                    +"<apellido>"+p.apellidos +"< / apellido > < / xml >";
     }
 }
 public class Test_Persona {

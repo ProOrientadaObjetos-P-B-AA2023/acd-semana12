@@ -12,7 +12,6 @@ class Persona {
     public void establecerEdad(int n) { edad = n;  }
     public String obtenerNombre() { return nombre;   }
     public int obtenerEdad() { return edad;  }
-
     public double promedioEdades(ArrayList<Persona> listaPersonas) {
         double promedio = 0; double suma = 0;
         for (int i = 0; i < listaPersonas.size(); i++)
@@ -20,7 +19,6 @@ class Persona {
         promedio = suma / listaPersonas.size();
         return promedio;
     }
-
 }
 public class Principal{
     public static void main(String[] args) {

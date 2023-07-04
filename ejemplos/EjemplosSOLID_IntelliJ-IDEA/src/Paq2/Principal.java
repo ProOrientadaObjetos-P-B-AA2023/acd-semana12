@@ -1,13 +1,13 @@
+//S — Single responsibility principle - Principio de responsabilidad única
 package Paq2;
 import java.util.ArrayList;
 import java.util.List;
-class Persona extends Principal {
+class Persona {
     private String nombre;
     private int edad;
     public Persona(String n, int e){
         nombre = n;
-        edad = e;
-    }
+        edad = e;  }
     public void establecerNombre(String n){
         nombre = n;
     }
@@ -32,9 +32,8 @@ class OperacionesEstudiantes {
     }
     public void establecerPromedioEdades(){
         double suma = 0;
-        for(Persona e: obtenerEstudiante()){
+        for(Persona e: obtenerEstudiante())
             suma += e.obtenerEdad();
-        }
         promedioEdades = suma/obtenerEstudiante().size();
     }
     public double obtenerPromedioEdades(){

@@ -1,9 +1,7 @@
 //O — Open/closed principle (Principio abierto/cerrado)
 package Paq4;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
 abstract class Transporte {
     protected double tarifa;
     public double obtenerTarifa(){
