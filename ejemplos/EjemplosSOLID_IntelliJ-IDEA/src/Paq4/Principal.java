@@ -65,7 +65,6 @@ class Principal {
         TiposTransporte tipos = new TiposTransporte();
         tipos.establecerTransportes(new ArrayList<Transporte>(List.of(bus, taxi)));
         tipos.establecerPromedioTarifas();
-        System.out.printf("Promedio de Tarifas: %.2f", 
-                tipos.obtenerPromedioTarifas());
+        System.out.printf("Promedio de Tarifas: %.2f", tipos.obtenerPromedioTarifas());
     }
 }

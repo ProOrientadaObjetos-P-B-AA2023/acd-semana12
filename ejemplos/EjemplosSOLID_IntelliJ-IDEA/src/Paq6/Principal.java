@@ -1,5 +1,5 @@
 //L — Liskov substitution principle (Principio de sustitución de Liskov) 
-package paquete06;
+package Paq6;
 class Persona {
     private String nombre;
     public Persona(String n){
