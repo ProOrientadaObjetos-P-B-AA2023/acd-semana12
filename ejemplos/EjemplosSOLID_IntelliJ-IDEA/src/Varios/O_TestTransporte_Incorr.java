@@ -25,7 +25,7 @@ class TransporteTaxi {
 }
 public class O_TestTransporte_Incorr {
     public static void main(String[] args) {
-        TipoTransporte TransporteTaxi = new TipoTransporte(new TransporteBus("Urbano", 10), new TransporteTaxi("Loja", 20));
-        System.out.println("Promedio de tarifas: " + TransporteTaxi.calcularPromedioTarifas());
+        TipoTransporte listaTransporte = new TipoTransporte(new TransporteBus("Urbano", 10), new TransporteTaxi("Loja", 20));
+        System.out.println("Promedio de tarifas: " + listaTransporte.calcularPromedioTarifas());
     }
 }
